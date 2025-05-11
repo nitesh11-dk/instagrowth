@@ -259,7 +259,7 @@ const categories = [
 
 
 const sendDiscordOrder = (item: any) => {
-  const contact = prompt("Enter your Email, Instagram ID, or WhatsApp number:");
+  const contact = prompt("Enter your WhatsApp number ,Instagram ID or Email :");
 
   if (!contact || contact.trim() === "") {
     toast.error("Contact info is required.");
