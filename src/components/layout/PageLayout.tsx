@@ -10,11 +10,11 @@ const navItems: NavItem[] = [
     icon: Home,
   },
 
-  {
-    title: 'Services',
-    href: '/services',
-    icon: DollarSign,
-  }
+  // {
+  //   title: 'Services',
+  //   href: '/services',
+  //   icon: DollarSign,
+  // }
 ];
 
 interface PageLayoutProps {

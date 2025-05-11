@@ -1,14 +1,12 @@
 import React from 'react';
 import { HeroSection } from '../components/home/HeroSection';
-import { ServicesSection } from '../components/home/ServicesSection';
 import { PricingPreviewSection } from '../components/home/PricingPreviewSection';
-import { ContactSection } from '../components/home/ContactSection';
-
+import {PricingPage} from './PricingPage'
 export const HomePage = () => {
   return (
     <div>
       <HeroSection />
-      <PricingPreviewSection />
+      <PricingPage />
     </div>
   );
 };

@@ -14,7 +14,7 @@ function App() {
       <PageLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/services" element={<PricingPage />} />
+          {/* <Route path="/services" element={<PricingPage />} /> */}
         </Routes>
         <Footer />
          <ToastContainer />
