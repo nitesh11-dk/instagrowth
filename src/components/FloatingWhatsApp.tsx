@@ -38,7 +38,7 @@ export const FloatingWhatsApp = () => {
             </p>
             
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/919403080787"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white w-full py-2 px-4 rounded-md flex items-center justify-center font-medium transition-colors"

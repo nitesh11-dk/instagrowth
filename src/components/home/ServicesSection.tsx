@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, MessageCircle, Eye, Bookmark, Users, TrendingUp as Trending, Repeat, Zap } from 'lucide-react';
+import { Heart, MessageCircle, Eye, Bookmark,Share, Users, TrendingUp as Trending, Repeat, Zap } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '../ui/Card';
 import { Button } from '../ui/Button';
 import { Link } from 'react-router-dom';
@@ -17,25 +17,31 @@ const services: ServiceItem[] = [
     icon: Heart,
   },
   {
+    title: 'Reels Views',
+    description: 'Get more exposure with increased views on your reels content.',
+    icon: Trending,
+  },
+  {
     title: 'Comments',
     description: 'Get meaningful comments that add value to your content.',
     icon: MessageCircle,
   },
   {
-    title: 'Story Views & Likes',
-    description: 'Make your stories more popular with increased views and interactions.',
-    icon: Eye,
+    title: 'Share',
+    description: 'Boost your algorithm ranking with post Shares from real accounts.',
+    icon: Share,
   },
   {
-    title: 'Saves',
-    description: 'Boost your algorithm ranking with post saves from real accounts.',
+    title: 'Save',
+    description: 'Boost your algorithm ranking with post Save from real accounts.',
     icon: Bookmark,
   },
   {
-    title: 'Reels Views',
-    description: 'Get more exposure with increased views on your reels content.',
-    icon: Trending,
+    title: 'Story Views',
+    description: 'Make your stories more popular with increased views and interactions.',
+    icon: Eye,
   },
+  
 ];
 
 export const ServicesSection = () => {

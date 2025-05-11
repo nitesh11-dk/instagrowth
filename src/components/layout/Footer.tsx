@@ -37,41 +37,17 @@ export const Footer = () => {
               </a>
             </div>
           </div>
-          
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {[
-                { name: 'Home', path: '/' },
-                { name: 'Services', path: '/#services' },
-                { name: 'Pricing', path: '/pricing' },
-                { name: 'About Us', path: '/about' },
-                { name: 'Contact', path: '/contact' },
-              ].map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.path} 
-                    className="text-gray-400 hover:text-purple-400 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
+      
           {/* Services */}
           <div>
             <h3 className="text-lg font-bold text-white mb-4">Our Services</h3>
             <ul className="space-y-2">
               {[
+
                 'Instagram Followers',
                 'Post/Reel Likes',
                 'Comments',
                 'Story Views & Likes',
-                'Saves',
-                'Custom Packages',
               ].map((service, index) => (
                 <li key={index}>
                   <Link 

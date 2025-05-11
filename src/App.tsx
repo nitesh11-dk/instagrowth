@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { PageLayout } from './components/layout/PageLayout';
 import { HomePage } from './pages/HomePage';
 import { PricingPage } from './pages/PricingPage';
-import { ContactPage } from './pages/ContactPage';
 import { Footer } from './components/layout/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -13,11 +14,10 @@ function App() {
       <PageLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          {/* Add 404 and other routes as needed */}
+          <Route path="/services" element={<PricingPage />} />
         </Routes>
         <Footer />
+         <ToastContainer />
         <FloatingWhatsApp />
       </PageLayout>
     </Router>

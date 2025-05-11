@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 export const HeroSection = () => {
   return (
     <section className="relative py-20 overflow-hidden">
-      {/* Purple gradient on top */}
       <div className="absolute top-0 left-1/4 w-1/2 h-1/2 bg-purple-500/10 blur-[120px] rounded-full pointer-events-none" />
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -46,7 +45,7 @@ export const HeroSection = () => {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-16">
           {[
-            { icon: Zap, text: "Start in 60 Seconds" },
+            { icon: Zap, text: "Start in 15-30 minutes" },
             { icon: ShieldCheck, text: "100% Safe & Secure" },
             { icon: ThumbsUp, text: "High Quality Engagement" },
             { icon: Users, text: "Real-Looking Profiles" }

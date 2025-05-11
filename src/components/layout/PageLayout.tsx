@@ -9,26 +9,12 @@ const navItems: NavItem[] = [
     href: '/',
     icon: Home,
   },
+
   {
     title: 'Services',
-    href: '/#services',
-    icon: ShoppingBag,
-  },
-  {
-    title: 'Pricing',
-    href: '/pricing',
+    href: '/services',
     icon: DollarSign,
-  },
-  {
-    title: 'About Us',
-    href: '/about',
-    icon: Info,
-  },
-  {
-    title: 'Contact',
-    href: '/contact',
-    icon: Mail,
-  },
+  }
 ];
 
 interface PageLayoutProps {

@@ -4,27 +4,27 @@ import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '../ui/Card
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 import { Link } from 'react-router-dom';
-import { PricingItem } from '../../types';
+import { PricingItemS } from '../../types';
 
-const popularPricingItems: PricingItem[] = [
+const popularPricingItems: PricingItemS[] = [
   {
-    title: 'Instagram Post + Reels Likes',
+    title: 'Instagram Followers',
+    description: 'Real-Active • 400k/day',
+    price: '₹199',
+    badge: 'Trending',
+    badgeColor: 'warning',
+  },
+  {
+    title: 'Instagram Post / Reels Likes',
     description: '100k Per Day • Fast Delivery',
-    price: '₹2.3',
-    badge: '25% OFF',
+    price: '₹19',
+    badge: 'Popular',
     badgeColor: 'danger',
     popular: true,
   },
-  {
-    title: 'Instagram Likes 100% Old Account',
-    description: 'Zero Drop • 100% Real Accounts',
-    price: '₹1.8',
-    badge: 'Popular',
-    badgeColor: 'primary',
-  },
-  {
-    title: 'Instagram Story Views + Likes',
-    description: 'Female Account • Guaranteed Delivery',
+    {
+    title: 'Instagram Reels Views ',
+    description: 'Real Account • Guaranteed Delivery',
     price: '₹9',
     badge: 'Trending',
     badgeColor: 'warning',
@@ -92,7 +92,7 @@ export const PricingPreviewSection = () => {
         </div>
         
         <div className="flex justify-center">
-          <Link to="/pricing">
+          <Link to="/services">
             <Button variant="outline" size="lg" className="group">
               View All Packages
               <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" size={18} />

@@ -8,9 +8,7 @@ export const HomePage = () => {
   return (
     <div>
       <HeroSection />
-      <ServicesSection />
       <PricingPreviewSection />
-      <ContactSection />
     </div>
   );
 };
