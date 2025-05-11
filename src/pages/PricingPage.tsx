@@ -304,7 +304,7 @@ export const PricingPage = () => {
     : pricingItems.filter(item => item.category === activeCategory);
 
   return (
-    <div className="py-16 px-4 md:px-6 max-w-7xl mx-auto">
+    <div id='#pricing' className="py-16 px-4 md:px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <div className="inline-flex items-center px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-sm font-medium mb-4">
           <ShoppingBag size={16} className="mr-2" />

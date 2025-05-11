@@ -22,7 +22,7 @@ export const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/pricing">
+            <Link to="/#pricing">
               <Button 
                 size="lg" 
                 className="group animate-pulse hover:animate-none"
