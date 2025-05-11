@@ -43,9 +43,9 @@ export const SideNav = ({ items }: SideNavProps) => {
           {/* Logo */}
           <div className="p-6 border-b border-gray-800">
             <Link to="/" className="flex items-center gap-2 text-xl font-bold text-white">
-              <Instagram className="text-purple-500" size={24} />
+              <img src="/logo.jpg" alt="" className='h-10 object-cover w-10 rounded-full' />
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                InstaGrowth
+                Valora.Growth
               </span>
             </Link>
           </div>
