@@ -83,7 +83,7 @@ export const SideNav = ({ items }: SideNavProps) => {
           
           {/* Contact Button */}
           <div className="p-4 border-t border-gray-800">
-            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/919403080787" target="_blank" rel="noopener noreferrer">
               <Button variant="primary" fullWidth className="group">
                 <MessageCircle 
                   size={18} 

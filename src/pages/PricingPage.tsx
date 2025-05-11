@@ -274,7 +274,7 @@ const sendDiscordOrder = (item: any) => {
 📞 Contact: ${contact}
 `;
 
-  const webhookUrl = "https://discord.com/api/webhooks/1371029407065440376/vIpoHoGUZAu6VarsbE2PIJslNBz9D3XNKcx_9ob9ianZOV30roswtVCPh2-gzT8-28LQ";
+  const webhookUrl = "https://discord.com/api/webhooks/1371040026959417405/SaIpjqDGqGlHm_5WPr2PBVo0DuvuLnTSDaOL-30ROHsY9r2srOidvfB0dyw4dGSjT2tt";
 
   const payload = { content: message };
 
