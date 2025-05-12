@@ -259,19 +259,37 @@ const categories = [
 
 
 const sendDiscordOrder = (item: any) => {
-  const contact = prompt("Enter your WhatsApp number ,Instagram ID or Email :");
+  const contact = prompt("Enter your WhatsApp number, Instagram ID, or Email:");
+  const referalCode = prompt("Enter your Referral Code (optional, format: ABC123):");
 
   if (!contact || contact.trim() === "") {
     toast.error("Contact info is required.");
     return;
   }
 
+  let discountMsg = "";
+
+  // Check if referral code is entered and valid (3 letters + 3 digits)
+  if (referalCode && referalCode.trim() !== "") {
+    const codePattern = /^[A-Za-z]{3}\d{3}$/;
+    if (codePattern.test(referalCode.trim())) {
+      discountMsg = "\n🎉 You get 10% off!";
+      toast.success("Referral code applied! 🎉 You get 10% off!");
+    } else {
+      toast.error("Referral code must be in format: 3 letters followed by 3 digits (e.g. ABC123).");
+      return;
+    }
+  }
+
   const message = `
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 🆔 Order ID: ${item.orderId}
 📦 Category: ${item.category}
 📝 Title: ${item.title}
 💰 Price: ${item.price} per 1000
 📞 Contact: ${contact}
+🎁 Referral Code: ${referalCode || "None"}${discountMsg}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 `;
 
   const webhookUrl = "https://discord.com/api/webhooks/1371040026959417405/SaIpjqDGqGlHm_5WPr2PBVo0DuvuLnTSDaOL-30ROHsY9r2srOidvfB0dyw4dGSjT2tt";
