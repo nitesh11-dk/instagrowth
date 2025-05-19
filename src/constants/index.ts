@@ -251,4 +251,4 @@ export const pricingItems: PricingItem[] = [
 ];
 
 
-export const validReferralCodes = ["ktf942"];
+export const validReferralCodes = ["ktf942","vlg010"];
