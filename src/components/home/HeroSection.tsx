@@ -6,10 +6,13 @@ import { Link } from 'react-router-dom';
 export const HeroSection = () => {
   return (
     <section className="relative py-20 overflow-hidden">
+      {/* Background blur circle */}
       <div className="absolute top-0 left-1/4 w-1/2 h-1/2 bg-purple-500/10 blur-[120px] rounded-full pointer-events-none" />
       
+      {/* Content container */}
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center text-center mb-10">
+          {/* Heading */}
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white">
             Grow Your Instagram 
             <span className="block mt-2 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -17,11 +20,13 @@ export const HeroSection = () => {
             </span>
           </h1>
           
+          {/* Subheading */}
           <p className="text-xl md:text-2xl max-w-3xl mb-8 text-gray-300">
             Buy Real Likes, Followers, Comments & More to Boost Your Social Presence
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4">
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 items-center">
             <Link to="/#pricing">
               <Button 
                 size="lg" 
@@ -40,9 +45,15 @@ export const HeroSection = () => {
                 View Services
               </Button>
             </Link>
+
+            {/* Tagline below buttons */}
+            <p className="mt-4 text-sm md:text-base text-pink-400 font-medium text-center sm:text-left">
+              Use referral code <span className="text-white font-semibold">VLG010</span> to get <span className="text-white font-semibold">10% OFF</span>!
+            </p>
           </div>
         </div>
         
+        {/* Features Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-16">
           {[
             { icon: Zap, text: "Start in 15-30 minutes" },
@@ -60,3 +71,4 @@ export const HeroSection = () => {
     </section>
   );
 };
+
