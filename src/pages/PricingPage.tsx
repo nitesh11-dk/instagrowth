@@ -150,7 +150,7 @@ export const PricingPage = () => {
 
               </ul>
               <div className="flex items-baseline mt-4">
-                <span className="text-3xl font-bold text-white">{item.price}</span>
+                <span className="text-3xl font-bold text-white">{item.price +(item.price *0.10)}</span>
                 <span className="ml-1 text-gray-400">per 1000</span>
               </div>
             </CardContent>
