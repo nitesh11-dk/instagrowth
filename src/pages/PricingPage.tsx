@@ -44,7 +44,7 @@ const sendDiscordOrder = (item: any) => {
 🆔 Order ID: ${item.orderId}
 📦 Category: ${item.category}
 📝 Title: ${item.title}
-💰 Price: ${item.price} per 1000
+💰 Price: ${item.price +item.price *0.10} per 1000
 📞 Contact: ${contact}
 🎁 Referral Code: ${referralCode || "None"}${discountMsg}
 ____________________________________
