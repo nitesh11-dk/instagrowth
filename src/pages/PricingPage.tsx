@@ -1,13 +1,10 @@
-import  { useState } from 'react';
-import {  ShoppingBag, Check, Zap } from 'lucide-react';
+import { useState } from 'react';
+import { ShoppingBag, Check, Zap } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { Button } from '../components/ui/Button';
 import { toast } from 'react-toastify';
-import { pricingItems ,categories,validReferralCodes } from '../constants/index';
- 
-
-
+import { pricingItems, categories, validReferralCodes } from '../constants/index';
 
 const sendDiscordOrder = (item: any) => {
   const contact = prompt("Please share your WhatsApp number, Instagram ID, or Email so we can contact you:");
@@ -19,8 +16,8 @@ const sendDiscordOrder = (item: any) => {
   }
 
   let discountMsg = "";
+  let finalPrice = item.price;
 
-  // If referral code is provided, validate it
   if (referralCode && referralCode.trim() !== "") {
     const code = referralCode.trim().toLowerCase();
     const codePattern = /^[A-Za-z]{3}\d{3}$/;
@@ -37,6 +34,7 @@ const sendDiscordOrder = (item: any) => {
 
     discountMsg = "\n🎉 You get 10% off!";
     toast.success("Referral code applied! 🎉 You get 10% off!");
+    finalPrice = item.price - item.price * 0.10;
   }
 
   const message = `
@@ -44,7 +42,7 @@ const sendDiscordOrder = (item: any) => {
 🆔 Order ID: ${item.orderId}
 📦 Category: ${item.category}
 📝 Title: ${item.title}
-💰 Price: ${item.price +item.price *0.10} per 1000
+💰 Price: ${finalPrice} per 1000
 📞 Contact: ${contact}
 🎁 Referral Code: ${referralCode || "None"}${discountMsg}
 ____________________________________
@@ -71,7 +69,6 @@ ____________________________________
     });
 };
 
-
 export const PricingPage = () => {
   const [activeCategory, setActiveCategory] = useState('All');
 
@@ -94,7 +91,6 @@ export const PricingPage = () => {
         </p>
       </div>
 
-      {/* Categories Filter */}
       <div className="mb-12">
         <div className="flex items-center justify-center flex-wrap gap-2">
           {categories.map((category) => (
@@ -113,7 +109,6 @@ export const PricingPage = () => {
         </div>
       </div>
 
-      {/* Pricing Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
         {filteredItems.map((item, index) => (
           <Card 
@@ -139,39 +134,35 @@ export const PricingPage = () => {
             <CardContent>
               <p className="text-gray-400 mb-4">{item.description}</p>
               <ul className="space-y-2 mb-6">
-                <ul className="space-y-2 mb-6">
-  {item.features?.map((feature, idx) => (
-    <li key={idx} className="flex items-center text-gray-300">
-      <Check size={18} className="text-green-400 mr-2 flex-shrink-0" />
-      <span>{feature}</span>
-    </li>
-  ))}
-</ul>
-
+                {item.features?.map((feature, idx) => (
+                  <li key={idx} className="flex items-center text-gray-300">
+                    <Check size={18} className="text-green-400 mr-2 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
               </ul>
               <div className="flex items-baseline mt-4">
-                <span className="text-3xl font-bold text-white">{item.price +(item.price *0.10)}</span>
+                <span className="text-3xl font-bold text-white">{item.price}</span>
                 <span className="ml-1 text-gray-400">per 1000</span>
               </div>
             </CardContent>
 
             <CardFooter>
-             <Button
-      variant="primary"
-      fullWidth
-      className="group"
-      onClick={() => sendDiscordOrder(item)}
-    >
-      <Zap size={18} className="mr-2 group-hover:animate-pulse" />
-      Buy Now
-    </Button>
-
+              <Button
+                variant="primary"
+                fullWidth
+                className="group"
+                onClick={() => sendDiscordOrder(item)}
+              >
+                <Zap size={18} className="mr-2 group-hover:animate-pulse" />
+                Buy Now
+              </Button>
             </CardFooter>
           </Card>
         ))}
       </div>
-
-      
     </div>
   );
 };
+
+ 
